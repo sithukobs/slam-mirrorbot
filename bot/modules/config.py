@@ -48,7 +48,7 @@ async def del_varr(client, message, app_):
         return
     await msg_.edit(
         f"`Sucessfully Deleted {_var} Var!`" \
-        f"\nYour heroku app will restart. Be patient.",
+        f"\nYour Heroku app will restart. Be patient.",
         parse_mode="markdown")
     del heroku_var[_var]
 
@@ -119,7 +119,7 @@ async def config_button(_, query):
     elif data == '4':
         return await query.message.edit(
             __header__.format(data)
-            + f"**[ Stop Duplicate Config ]**\n\n**STOP_DUPLICATE_MIRROR:** `{STOP_DUPLICATE_MIRROR}`\n\n**STOP_DUPLICATE_CLONE:** `{STOP_DUPLICATE_CLONE}`\n\n**STOP_DUPLICATE_MEGA:** `{STOP_DUPLICATE_MEGA}`\n\n**[ Block Mega Config ]**\n\n**BLOCK_MEGA_FOLDER:** `{BLOCK_MEGA_FOLDER}`\n\n**BLOCK_MEGA_LINKS:** `{BLOCK_MEGA_LINKS}`",
+            + f"**[ Stop and Block Config ]**\n\n**STOP_DUPLICATE:** `{STOP_DUPLICATE}`\n\n**BLOCK_MEGA_FOLDER:** `{BLOCK_MEGA_FOLDER}`\n\n**BLOCK_MEGA_LINKS:** `{BLOCK_MEGA_LINKS}`",
             reply_markup=types.InlineKeyboardMarkup(
                 [
                     [
@@ -192,7 +192,7 @@ async def config_button(_, query):
     elif data == '9':
         return await query.message.edit(
             __header__.format(data)
-            + f"**[ Others Config ]**\n\n**VIEW_LINK:** `{VIEW_LINK}`\n\n**STATUS_LIMIT:** `{STATUS_LIMIT}`\n\n**TIMEZONE:** `{TIMEZONE}`\n\n**DOWNLOAD_STATUS_UPDATE_INTERVAL:** `{DOWNLOAD_STATUS_UPDATE_INTERVAL}`\n\n**IGNORE_PENDING_REQUESTS:** `{IGNORE_PENDING_REQUESTS}`\n\n**AUTO_DELETE_MESSAGE_DURATION:** `{AUTO_DELETE_MESSAGE_DURATION}`\n\n**DOWNLOAD_DIR:** `{DOWNLOAD_DIR}`\n\n**IMAGE_URL:** `{IMAGE_URL}`\n\n**DATABASE_URL:** `{DB_URI}`",
+            + f"**[ Others Config ]**\n\n**VIEW_LINK:** `{VIEW_LINK}`\n\n**STATUS_LIMIT:** `{STATUS_LIMIT}`\n\n**DOWNLOAD_STATUS_UPDATE_INTERVAL:** `{DOWNLOAD_STATUS_UPDATE_INTERVAL}`\n\n**IGNORE_PENDING_REQUESTS:** `{IGNORE_PENDING_REQUESTS}`\n\n**AUTO_DELETE_MESSAGE_DURATION:** `{AUTO_DELETE_MESSAGE_DURATION}`\n\n**DOWNLOAD_DIR:** `{DOWNLOAD_DIR}`\n\n**DATABASE_URL:** `{DB_URI}`",
             reply_markup=types.InlineKeyboardMarkup(
                 [
                     [
